@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: hsl(0, 100%, 74%);
+    font-size: 16px;
+    color: #fff;
+}
+
+main {
+  position: relative;
+  background-image:  url(./images/bg-intro-mobile.png);
+  background-size: cover;
+  min-height: 1000px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 370px 630px;
+  text-align: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 10vh;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+p {
+    padding: 0 30px;
+    line-height: 1.6;
+    max-width: 380px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(248, 32%, 49%);
+    color: #fff;
+    width: 325px;
+    height: 90px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    padding: 15px 60px;
+    line-height: 1.5;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 10px rgb(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+button span {
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+    width: 325px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 10px rgb(0, 0, 0, 0.2);
+    margin-bottom: 60px;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+input:focus {
+    outline: hsl(250, 12%, 39%) solid 1px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(253, 10%, 37%) !important;
+    padding-left: 30px!important;
+}
+
+input:not(:focus) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(253, 10%, 37%) !important;
+    padding-left: 30px!important;
+}
+
+input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(253, 10%, 37%) !important;
+}
+
+input.error-icon::placeholder {
+    color: hsl(0, 100%, 74%) !important; 
+}
+
+input[type=submit] {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 36px;
+    height: 55px;
+    background-color: hsl(154, 59%, 51%);
+    color: #fff!important;
+    border: none;
+    box-shadow: 0px 5px rgb(48, 172, 118);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input.error {
+    outline: hsl(0, 100%, 74%) solid 1px;
+}
+
+input.success {
+    outline: hsl(250, 12%, 39%) solid 1px;
+}
+
+.terms {
+    color: hsl(246, 25%, 77%);
+    font-size: 11px;
+    padding: 0 15px;
+    line-height: 1.8;
+}
+
+.terms span {
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+}
+
+.error-message {
+     color: hsl(0, 100%, 74%);
+     font-size: 10px;
+     font-weight: 500;
+     text-align: end;
+     font-style: italic;
+}
+
+.error-icon {
+    background-image: url('./images/icon-error.svg');
+    background-size: 23px 23px;
+    background-repeat: no-repeat;
+    background-position: 231px 1.3rem;
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        background-image:  url(./images/bg-intro-desktop.png);
+        grid-template-columns: 1fr 1fr;
+        min-height: 600px;
+        grid-template-rows: 1fr;
+        align-items: center;
+        padding: 0 11.5vw;
+    }
+
+    .text-container {
+        text-align: start;
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 35px;
+        font-size: 3vw;
+    }
+    
+    p {
+        padding: 0 10px 0 0;
+    }
+
+    button {
+        width: 440px;
+        height: 60px;
+        padding: 15px 50px;
+    }
+    
+    form {
+        /* min-height: 475px;
+        max-height: 560px; */
+        width: 440px;
+        padding: 15px 25px;
+        margin-bottom: 0;
+    }
+
+    form:first-child {
+        margin-top: 10px;
+    }
+
+    input {
+        padding: 15px;
+    }
+
+    .terms {
+        padding: 10px 15px;
+    }
+
+    .error-icon {
+        background-position: 338px 1rem;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1400px) { 
+    p {
+        max-width: 550px;
+    }
+
+    button {
+        width: 540px;
+    }
+    
+    form {
+        width: 540px;
+    }
+
+    .error-icon {
+        background-position: 444px 1rem;
+    }
+
+}
